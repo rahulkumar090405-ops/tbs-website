@@ -1,0 +1,687 @@
+{
+  "success": true,
+  "businessName": "The Baking Spot",
+  "totalReviews": 32,
+  "overallRating": 4.9,
+  "reviews": [
+    {
+      "name": "Roopam Adhana",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjWndCSu-vCX4JiDdQLIBnsM-4XyJwYKjG2V-oPSfEAmb0YJhLw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/108883726967844726083?hl=en",
+      "rating": 5,
+      "text": "Thank you 'The baking spot '\n\nThe cake looked absolutely stunning — too pretty to even cut at first 😍🎂\nAnd the taste? Truly amazing! Soft, fresh, perfectly balanced and full of flavour ✨\n\nI had earlier ordered the Hazelnut flavour as well, and honestly that one was unforgettable too 🤎\nThis time we tried the Blueberry flavour 🫐 and everyone at home loved it so much. Every single person kept talking about how delicious it was 💖\n\nFrom presentation to taste, everything was just perfect. Thank you for always making our celebrations extra special and memorable 🤍",
+      "language": null,
+      "published": "2026-05-21 04:44:24",
+      "last_edited": "2026-05-21 04:44:24",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmNdDKtim4OmZ6EwJmzB91H26yaA3KV7Yd2FRB2yLnf_h0bdwo5M85fVd-6X8dkIAD5i2Uyc6iYE-7i9OVYRJUJRnym5e1VoTg3ZzQ1FK9f2THukyffcvB5pFZ8qTU0s-v5Vym9_VZGjJqqc=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmM59Ii1vsnU6htBSjKbLnWpZQJMi9VGb4AjkqSS48XeNVBOyWGjM3ueDnkUOe_oOW-3XEEXpTuGxh0YAs9tNeEoEGZRYVw5Y0Z_tZfc0_RLX-PDmFmpvyQotWfULEjkF83yIdJ-_Rot3uc=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmNh1f66GIojLM4UQgq2zCBLxHyE69PPUACDYsijq17YVfxOakThsOeXGWK_AogFeSuYEOSxKZFn4v3cqZTXmhkdeIrtgrmpGP9MO8wZUs1JltckBEL2mRKnHjerlxMHGorR2aRwh128aQo=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmOlc54R-iQ5VlqUearVawhRt1nsDaeTcp36Bt4mSqqiuyVl2BnQGTAyyg0GL7jWRCGRF7nCpLQfJapBactT-EFjiOYk8g9F-260CK8w7f6PguPUsQFxqp_fhANvrE_2CyBhEDaMTtq69iaP=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/1_roopam_adhana.jpg"
+    },
+    {
+      "name": "Dr Rohini Pakhiddey",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjXRpHDETozWeI-nfSlbKp2pCSsEX393rqSEW7ljTGSSWAIgCSLrDw=s120-c-rp-mo-ba12-br100",
+      "url": "https://www.google.com/maps/contrib/117604975788227813809?hl=en",
+      "rating": 5,
+      "text": "This was the second time I particularly ordered red velvet cake , this time on father's day, for my husband. I must say red velvet flavor of \"The baking spot\" is the best I ever tasted till now . The cake literally melts in your mouth and it becomes so difficult to control our taste buds with just one piece of this cake. Kudos to the baking skill of Ms. Rashmi🫡🫡 I have also tried her  pineapple cake with a chocolate brown cream for my birthday, it was well appreciated by my family and friends",
+      "language": null,
+      "published": "2026-06-21 12:28:36",
+      "last_edited": "2026-06-21 12:28:36",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmPlsKDmU_hYR6xU6jzU3AnFI82dUFQ0OgHD_-7ywPgJYAZot9CmWr9ibPOIpslXvzemsqAXmbYSU9qxxw24AMTVY2tzrs_0b4BQ-TdSEOJEYyaV55OXodylAH3rYAQ4spjq4MlNVJ6Bf1aj=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmM564LIiZe_1Vjd-UOOiVy_Vsmo_p2lCQXoN1wB6QvONHYsXoL9Ra0-YgQaD5rb8dC96dCRxnF3_koDTjjsuOmS1d8QknxqiBj9EWKHcecgrabsFqJGGm_jG3D10yiq3pkAePTUyGqh_0r1=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "2 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/2_dr_rohini_pakhiddey.jpg"
+    },
+    {
+      "name": "Anushka Gupta",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjW_YLA2O9Kf2EVFv_VsAQTvmAOSlM6cBNCyhuO0lZ37IdiykMnxhQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/114064842209197633116?hl=en",
+      "rating": 5,
+      "text": "I recently ordered this absolutely adorable bento cake from The Baking Spot, and I’m genuinely so impressed! Not only was it beautifully designed, but it was also made with whole wheat and stevia, which made it feel much healthier without compromising on taste at all. You can truly see the effort and love that went into every detail from the neat finishing to the cute artwork on the cake. It looked even better in real life than I expected! ✨\nThe delivery was perfectly on time, and the entire experience felt smooth and reliable. It’s rare to find someone who balances aesthetics, health and taste so well.\nHighly recommend The Baking Spot if you’re looking for something unique, thoughtful, and made with care. Will definitely be ordering again! 💛",
+      "language": null,
+      "published": "2026-04-29 03:49:30",
+      "last_edited": "2026-04-29 03:49:30",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmN3f_e9uPyc2ZvwWTHHUOe_x1bQJkFKhBgdj9MiKzyVXRu9WsR7vfkN-qaVjPvrvPbU7KuswtudmTe54e5dNNTs2sR1QXvJtiLL3EPI14erPUv7boEcJNJlXVKsXyojTrIAOMnw1mxRqonM=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmMjY_AsPbzH2aPoXNlVzfqIqUd_XjZFEf_qp2R9-rldGVYLY7YAHwZucZ72M-CF3Hc-yZXvrPQYqa6jfQ4FiygXawwXpD5Cyz57XyQXSsyQpT9xTQ6wXkkDqZeoTLk433LztInEFpmaCz1A=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmPMVJhcC7i9KywDr561zi_VswioGQYXaZ1feE2YaIk-eKDEcxpRkn0FWP46BPP-KmiPtF8zFR2reEehhS_Pij99S9eDvC_o70EbfpBCcHshv18qo_sDYVkVY-f_hC19hdITpDP3UAusDBWM=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmNnUHjXscde_zXrLe32mGS8kKr_9elWHyKSU1LH7V92PeB202NRiedPX7Dd-7IbSOZ19-VXbG8VYomhENXLOnAmgFOuTNL8joeRkmqWKLk179rIGo1f55YgB_BQxzNO8n7uwzv0fwUVi1tD=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you soo much 🥰",
+        "published": "2026-05-07 14:11:06",
+        "last_edited": "2026-05-07 14:11:06"
+      },
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/3_anushka_gupta.jpg"
+    },
+    {
+      "name": "Deepanshu Jain",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjX6GSadEy4sBcFor0Sr869Vj6kE3zP3JQCptxNTfK-LPVGP6k31=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/101520985216742828668?hl=en",
+      "rating": 5,
+      "text": "I recently ordered a Vanilla flavor cake for a birthday celebration held at the Golden World Banquet on May 24th, and I couldn't be more pleased with the experience.\n1:-Taste & Texture\nThe cake was absolutely delicious—perfectly moist and rich in flavor. It was a massive hit with all our guests!\n2:-Design/Appearance:\nThe presentation was spot on. The cake arrived looking exactly as we had discussed and envisioned.\n3:-Service & Delivery:\nThe team was professional, punctual, and very easy to coordinate with. The cake was delivered to the venue right on time, without a single issue.\n4:-Overall Value\nGiven the high quality of the ingredients and the seamless service, I found the pricing to be very reasonable.\nI would definitely recommend this bakery\n(The Baking Spot) ✌️to anyone looking for a high-quality, reliable cake for their special events. Thank you for making our celebration even more memorable",
+      "language": null,
+      "published": "2026-05-25 03:07:20",
+      "last_edited": "2026-05-25 03:07:20",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmMR4w9Y2r421LgqIZsq5PscZ5H0vvxaXLLVqg1BpB_i2kCvXH4v70JlS9ycPWZOoeWg_FyCXZxGRud0vMaRcvOEEtLhLxBdukuCpdtlmf8-f_3_HZ0nu23nU7117ucl9s6bi4LhozZ_d3E=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/4_deepanshu_jain.jpg"
+    },
+    {
+      "name": "Kritika Rastogi",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjUgffkKpj2d4Mh6PJf5kpnx-oQMQaRUoYMadRIFvtAmD5jcszhZ=s120-c-rp-mo-ba12-br100",
+      "url": "https://www.google.com/maps/contrib/114009002971892587525?hl=en",
+      "rating": 5,
+      "text": "A huge thank you to Rashmi, owner of The Baking Spot, for making such a beautiful and delicious cake for my bhatiji even at the last moment ❤️🎂\nHonestly, managing everything perfectly in such less time is not easy, but you did it so effortlessly. The cake looked absolutely gorgeous and tasted even better — soft, fresh, and made with so much love ✨\nSeeing my bhatiji so happy made the moment even more special 🥹\nSo proud of you, your hard work and dedication truly reflect in every cake you make. The Baking Spot deserves all the appreciation 🤍",
+      "language": null,
+      "published": "2026-05-23 11:35:25",
+      "last_edited": "2026-05-23 11:35:25",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmNt2fmHBMerxIcuoTrD9gGPkRUo04SkOjc07w7zY8XfOi9A95Arvs6k9Hmk9xdJcloLMEIWUEBc5uKEGqAEiUlQxIKL7fj_HYhQv38l0plQ4TdZQwvHGXXR5XvRMS5uVMuwWSqNnjF8W1Ou=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmOeqgzxY6ZU5UC92a6sAud3-b_EDfkE_y1piGQE98D_65W-FbKBeuan1hQWKZoH4COs8BL92OLmlX29q-jFHM0jlrU04SFDFrmTA1uVhR7KjhOAGn_hNX1x__qXLZUhJtJpKghUSd5MEztD=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/5_kritika_rastogi.jpg"
+    },
+    {
+      "name": "Shivani Prasad",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjUkeVAi35INMgVmAnnIoRLQv7oYrIQ_Q0E4grL2HynnA2u6pxA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/108886908581604420370?hl=en",
+      "rating": 5,
+      "text": "The jungle theme cake was just amazing! The animal detailing (lion, elephant, monkey) was so cute and perfectly crafted. Cake was soft, fresh, and very tasty—not too sweet. It became the highlight of the party. Highly recommended for kids’ birthdays.. Sab guests ne bahut appreciate kiya. Totally worth it!",
+      "language": null,
+      "published": "2026-05-06 14:41:20",
+      "last_edited": "2026-05-06 14:41:20",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmNZvWUuYkBYtPXqE_7u1GlsWUmal3B-A_kJDhhNrWSgf0t9cx3DbUDqCXQZySZnqajnPr0CCVJnnhhTs_LIUDhym8SLL6iIvAHUrauHoCYUaAfrH5pJelnEapMrNLLY9lG38bTi7u_pyRdW=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmMaMVXNGMUtbDdKFIdIgRhvuyXbHEehtBJaQ4yFWn-PdCXoYkl9_BFJw440VM7cT6AA_TCzTVHUAaLGax9O1uCyBWmcMs1XsvD_s80RABE8ctkhvLxdTUAMsbNfRdJjCC2aRFQa2CUL_SZt=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you soo much maam For your wonderful review 🫶🏻❤️",
+        "published": "2026-05-07 14:10:39",
+        "last_edited": "2026-05-07 14:10:39"
+      },
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/6_shivani_prasad.jpg"
+    },
+    {
+      "name": "geet rajput",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjVbjmD4frCm2VL51SGQGI23Skmjmjp1hSiQyoz0z-6hZ2B0AK9u=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/103227322752287836969?hl=en",
+      "rating": 5,
+      "text": "They truly don’t compromise on anything. From decoration to garnishing and taste — everything is absolutely perfect. 🎂✨\nThey fulfill every requirement exactly the way you want. The cake looks beautiful from top to bottom, and the taste is equally amazing. Every detail is handled so perfectly that there’s not even a single flaw.\n\nIf you want a cake that is both stunning in appearance and outstanding in taste, they are definitely the best choice! ❤️",
+      "language": null,
+      "published": "2026-05-26 04:59:57",
+      "last_edited": "2026-05-26 04:59:57",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "2 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/7_geet_rajput.jpg"
+    },
+    {
+      "name": "Ridham Maru",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocKm20g1MrbvZCyod5tfu5muZvUbQi-zQIXXZItlzEbg8zPpIA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/104504142052176031008?hl=en",
+      "rating": 5,
+      "text": "I ordered cake many times.. with different flavour… and everytime i am happy with her.. she never disappoint me with cake design and flavour… taste is very nice and decoration is best. I always prefer her for cake.",
+      "language": null,
+      "published": "2026-04-27 12:55:34",
+      "last_edited": "2026-04-27 12:55:34",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmOfWdD4k0MczOz_B6AnHIQGcw1OIHEntwnd6ciJIPpLXsQ1JTs0TTDsU0aMijlBF2oW8y-YdvXGhmdQ5v8hsO6Z6EIwyAUkB6C18AkBvpHelDMQRaQyBkNeLheHqTCektN6mdMeram4BIt1=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you soo much maam for your review 🫶🏻",
+        "published": "2026-05-07 14:11:27",
+        "last_edited": "2026-05-07 14:11:27"
+      },
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/8_ridham_maru.jpg"
+    },
+    {
+      "name": "Juhi Kumari",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjWgzL2qtrZKHwH1Edqc8C3T1NHU9oROxAiVvS2QRyim_JSUZbVEZg=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/100464953342931935024?hl=en",
+      "rating": 5,
+      "text": "The cake was very delicious.\nThe decoration was beautiful and attractive. Full of flavour, freshly baked , soft and yummy",
+      "language": null,
+      "published": "2026-05-07 09:42:52",
+      "last_edited": "2026-05-07 09:42:52",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmO4uNvYK-ukC0TmTkCNZOH1qKjUyIyz2af9GGZ5mqMO7D2y_KE9vaH0WJKLVYcQ5FeUpNgkT8XfqVz22bDkEnu2cM08cKaopm-K3JtofePMBbbxbBu-b5l-LmT1OcDsAC7cU78JlJCz0_B9=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you soo much maam 🤗 U like cake 🫶🏻 Can’t wait to bake for u again.",
+        "published": "2026-05-07 13:51:24",
+        "last_edited": "2026-05-07 13:51:24"
+      },
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/9_juhi_kumari.jpg"
+    },
+    {
+      "name": "Surbhi Malpani",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjWXwqSQXDoS17UeJ4xmOMpKiMRbdTZK23_7Aqq4bzURGgmpn3MzYw=s120-c-rp-mo-ba12-br100",
+      "url": "https://www.google.com/maps/contrib/116975124915898299889?hl=en",
+      "rating": 5,
+      "text": "This cake is so amazing!\nTastes delicious and very fresh.\nPerfectly made as per my given Pics,\nyou even matched it with my husband's Digital pic so beautifully🩷\nThanks for accepting my order at last moment.\nAmazing Work!\n\nThank You so Much *The Baking Spot*",
+      "language": null,
+      "published": "2025-12-16 09:08:37",
+      "last_edited": "2025-12-16 09:08:37",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmPnfc8AJ8DhvreWSbzk0FC9U_qEzOfa9aZc8bnvrbmQ7LnEcJaAxJ0oZQLPXBNVeEUedGM1em4HS2b8XofY8C9wPTBQl_IRDFGBYUdhH4R0IyLnY-tArziVtTabWZF_h0jQJ3fPeaskdO3K=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you maam 😍",
+        "published": "2026-05-07 14:12:50",
+        "last_edited": "2026-05-07 14:12:50"
+      },
+      "relative_time": "8 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/10_surbhi_malpani.jpg"
+    },
+    {
+      "name": "Tarun Saxena",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocJiFqnZHmBuuG3N9_ces8ZjAsJ_fuR9vbk2PfQZEOt2mBei_nm3=s120-c-rp-mo-ba12-br100",
+      "url": "https://www.google.com/maps/contrib/115449210979189008536?hl=en",
+      "rating": 5,
+      "text": "Amazing beautifully crafted cakes, very prompt midnight delivery and superb customization. Keep up the good work and keep spreading sweetness !!!",
+      "language": null,
+      "published": "2026-05-06 15:31:52",
+      "last_edited": "2026-05-06 15:31:52",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmMJ5S9AwpcMe6kic-0pVmuKBhZu6UWZ0lri9pndPaTHfrxpFoJlXIU0spQV-wSRp75pSoRxv2fIWaTklSQrrIjoLVuIgbpp_Op6cXSDPrN2_Vay_Ti1paHACRgg-Qf-SJQcNzsEiqHVTdzD=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmOhvzg-DINkMMst3W7aYEMM-KTv7TDIL2iwbMwsFiiBR-fcJVDm5yi6b-TJroNSeWs-sNiGMYD_xPHrZdcSLatId9Oz_16FZo7C3-gyL0jBlJ-zVmkndfChz1Q-asrZeGlxNbMHWDCPAFg5=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you soo much sir for your lovely feedback🥰 This means alot. 🫶🏻",
+        "published": "2026-05-07 14:10:02",
+        "last_edited": "2026-05-07 14:10:02"
+      },
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/11_tarun_saxena.jpg"
+    },
+    {
+      "name": "Fur Bunny",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjXyryuzsSthLZP7jWHz9tn45lFZ9GxGP6CH4pdnjQq7Vdbolko=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/115519274343105872870?hl=en",
+      "rating": 5,
+      "text": "Truly an incredible home Baker I'm my area.\nWhy I like her:\nShe is polite and honest about prices and the deliverables at the same moment.\nSweet and listens to what's your taste.\nI prefer her over any bakery in my area.",
+      "language": null,
+      "published": "2026-04-29 12:26:57",
+      "last_edited": "2026-04-29 12:26:57",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmO3WOrZblCjm8V2zJm5EKW24Yviv5X23DTffBQSJp7A_AE4UEpOX7qnN43ueYyO2jzu6r02XjrD53R64RpKd7C_6R9Ov7xrZKbYMNZQNCw6Sciu7wtIdjktprR_t4lzK1wFG9KHmE7Poom8=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you soo much 🫶🏻",
+        "published": "2026-05-07 14:10:56",
+        "last_edited": "2026-05-07 14:10:56"
+      },
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/12_fur_bunny.jpg"
+    },
+    {
+      "name": "__vaibhav rajput",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjUvldZOZlwmXS4zKH6N_3qGxFq-VPD4WbJHRUp4mhgXVrZCO1vC=s120-c-rp-mo-ba12-br100",
+      "url": "https://www.google.com/maps/contrib/104439823605545114944?hl=en",
+      "rating": 5,
+      "text": "Verv impressed with the quality. The\ncake not onlv looked stunning but tastec\neven better\nThe lavers were soft. and\nthe frosting was smooth and delicious\ndo😘",
+      "language": null,
+      "published": "2025-12-04 01:52:17",
+      "last_edited": "2025-12-04 01:52:17",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmN9SWbPV6m0_fsIuWbtpBblY5AbeAPzMblrpcpxs4dSTP2mfJXXoftO0Uu83jXkugwJ9Cl5ylTzsmAmRC1Dt32RMcwjD25yqh2pW-PtZIXW4uCIba_9ezm3kEbQK1t2BXgS9_KibCwyekg=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thanks for review 👍",
+        "published": "2025-12-04 04:33:48",
+        "last_edited": "2025-12-04 04:33:48"
+      },
+      "relative_time": "8 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/13___vaibhav_rajput.jpg"
+    },
+    {
+      "name": "deepali pandey",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjWQlsaCXOQ88kxmwhsiDmvP4x5OhMk1xDYbZ-xC_DEf9ln3Z5f7yw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/118408509605735714457?hl=en",
+      "rating": 5,
+      "text": "Thank you so much dear for making our day special ❤️ Everyone loved the cake so much 🍰it was delicious fresh.. As per the expectation 🥰",
+      "language": null,
+      "published": "2026-06-21 13:55:44",
+      "last_edited": "2026-06-21 13:55:44",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmNeYKUTsvhiApkP0bdOHq-GH1jrDyCyIZVosXoa-rJcsyvQzKvUk91kD6QeWxt1NL0wv_11VrlssrqMwXt9-ztlKAUngpeqQqGX7DHSGvbNGWzFg-BPY-FkQLWM_JeDUPRgo4pcZBM7izQy=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "2 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/14_deepali_pandey.jpg"
+    },
+    {
+      "name": "Yogesh Sharma",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjVY3xdnvm7bdGz1iLamXWtifybd2jL_j4E8URynlwRU4NwTiwJE=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/109727289975280338538?hl=en",
+      "rating": 4,
+      "text": "Tried the Korean Cream Cheese Bun, NY-style cookies (Oreo, Nutella, Red Velvet) and Raagi cookies from The Baking Spot – and honestly, dil khush ho gaya! 😍\n\nEverything felt super fresh, bilkul homemade vibe, no artificial taste – just pure love baked in every bite. Highly recommend if you're craving something unique, rich, and satisfying.\n\nThank you The Baking Spot for making snacking so special!",
+      "language": null,
+      "published": "2025-07-19 01:41:51",
+      "last_edited": "2025-07-19 01:41:51",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmP0luZtEdvwUW9_1ZsrIWHfl6NR5wsXPjKqEHnCW8liAciA_UUwumws5pZ0ba9MmG5o7aSUbTDicdEGU-kWFljgSxJP1jrAT1m9iZTBUbYPpspJx9NAwHtkQVqOYmY_K47z6i-DQ3oxUlpz=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "a year ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/15_yogesh_sharma.jpg"
+    },
+    {
+      "name": "rekha singh",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocKEPN0AL-MCOmiboQobUWDSlv2sHMWdHb4cK7c8cvWDC7rFfQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/110973002502608018284?hl=en",
+      "rating": 5,
+      "text": "I have ordered a cake for my parents anniversary.The cake looked beautiful and tasted delicious.It was a nice experience to be a baking spot customer.",
+      "language": null,
+      "published": "2026-02-27 13:17:54",
+      "last_edited": "2026-02-27 13:17:54",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmM9mfo3XMVocsHO0YKcBXKVwKLDlDvKW41yt0XiFhxFxE18ZgFekcCnGs6ofA6EfdwfUOv6dXRgqCyqM0XOfExSYd_NOla6x4IPtSb4dMTrGERB2HPbAaRi_yvx2c0hUS7IjsByGBh-Vv73=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you so much 🥰",
+        "published": "2026-05-07 14:11:49",
+        "last_edited": "2026-05-07 14:11:49"
+      },
+      "relative_time": "5 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/16_rekha_singh.jpg"
+    },
+    {
+      "name": "Shashi Dhar",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjUT1Pth9OolLqnZar31bagr42D9d6dxBdGGHQcPg2uUw_8X3UwHNw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/115445495532538812132?hl=en",
+      "rating": 5,
+      "text": "Awesome mother's day cake.. baked hygienically and tasted very very good",
+      "language": null,
+      "published": "2026-05-10 13:07:34",
+      "last_edited": "2026-05-10 13:07:34",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/17_shashi_dhar.jpg"
+    },
+    {
+      "name": "AASHI VERMA",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjXFdLtV6mnD1DNqqvDum77W1i5oyAKUT7Nr4BGoinr8TUH91UXr=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/109648639036000926471?hl=en",
+      "rating": 5,
+      "text": "The baking area is organized, clutter-free, and everything is handled with great care. Even the packaging is hygienic and secure, keeping the food fresh until delivery.",
+      "language": null,
+      "published": "2025-12-04 04:11:43",
+      "last_edited": "2025-12-04 04:11:43",
+      "images": null,
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you ☺️ ",
+        "published": "2026-05-07 14:13:10",
+        "last_edited": "2026-05-07 14:13:10"
+      },
+      "relative_time": "8 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/18_aashi_verma.jpg"
+    },
+    {
+      "name": "Akarsh Gupta",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjVD8jwyEipxeZYjDkjaFnnjizHdcddwsPP_TDiZdyZsADQRhro9gA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/109019029455105436725?hl=en",
+      "rating": 5,
+      "text": "Honestly, I wasn’t expecting the cake to be this good. I’ve tasted many, but this one had the perfect texture and flavour. Melted in the mouth! 😍✨",
+      "language": null,
+      "published": "2025-12-04 04:08:49",
+      "last_edited": "2025-12-04 04:08:49",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "8 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/19_akarsh_gupta.jpg"
+    },
+    {
+      "name": "Divya Rastogi",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocJzFxVZ5WyM12Dq4yOA5FL5V8-vGmtlUfwqw9yt2C9BFXXGoA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/109869455667805591369?hl=en",
+      "rating": 5,
+      "text": "Delicious cake, kids loved it",
+      "language": null,
+      "published": "2025-12-13 00:15:05",
+      "last_edited": "2025-12-13 00:15:05",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmNOeSoda2wkDo97p2qRiH74bFxcbWC4WYIkoQO6xkGxarpNbLtO74ABpStODeF9Dv-Sg9Uo0oyVi67zxe7l9aVe1VZ1z2NddSbG3Fpx4kg-KfsCDqLuUDUZ9bEkEdGyJuCSrzn7-lOHtzNM=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmN4B4qkVLi9KpWkwi0KX8NZqJE_CHN9nGZefl5Ee1w2pocwlhC6hPfUo56fcdlXvtf4zxBXC5U85IdDwYBzeKmqwmKNPhA2ZH9O8ZC7jcGKBRHjwmc3v56Ev4dItOpHCHg3j99Zc7KJJ6tm=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": {
+        "text": "Thank you so much, Divya! 💖\nWe're really happy to hear that the kids loved the cake — that means the world to us! ✨\n— The Baking Spot",
+        "published": "2025-12-13 08:20:53",
+        "last_edited": "2025-12-13 08:20:53"
+      },
+      "relative_time": "8 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/20_divya_rastogi.jpg"
+    },
+    {
+      "name": "Bhavuk Sharma",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjV3D0TsRFsH7D4As2rTNYOKswW-xjoAM6xqp762MeogLS4qO2mB=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/104561263520283194669?hl=en",
+      "rating": 5,
+      "text": "Best place to fulfil my sweet cravings in a healthier way.",
+      "language": null,
+      "published": "2026-04-11 09:25:21",
+      "last_edited": "2026-04-11 09:25:21",
+      "images": null,
+      "source": "Local Guide",
+      "response": {
+        "text": "Thanks ☺️ ",
+        "published": "2026-05-07 14:11:38",
+        "last_edited": "2026-05-07 14:11:38"
+      },
+      "relative_time": "4 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/21_bhavuk_sharma.jpg"
+    },
+    {
+      "name": "Aditya Prakash",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocK7EyG5i1u8uxQTAa7Mg4mLrtASUsgFBXrzUneTRnRxXQwUUQ=s120-c-rp-mo-ba12-br100",
+      "url": "https://www.google.com/maps/contrib/111671592170392696380?hl=en",
+      "rating": 5,
+      "text": "Excellent quality and great variety!",
+      "language": null,
+      "published": "2025-10-11 11:24:53",
+      "last_edited": "2025-10-11 11:24:53",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "10 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/22_aditya_prakash.jpg"
+    },
+    {
+      "name": "Aman Prakash",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocKgQQWOxOM6Wzg5kIVTgX6ONYf0vB5z2lgeTIV_cP5bJpB6sw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/109600394174950979042?hl=en",
+      "rating": 5,
+      "text": "Fresh & tasty.",
+      "language": null,
+      "published": "2025-02-05 11:25:47",
+      "last_edited": "2025-02-05 11:25:47",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "a year ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/23_aman_prakash.jpg"
+    },
+    {
+      "name": "Rajni Bhandari",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocI9gN1XvvUT2quipKrPfYIcKo59ePfeeL_0BayW_WJzQdgbQw=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/111357127282094809644?hl=en",
+      "rating": 5,
+      "text": "Ordered two birthday cakes from Baking Spot and both exceeded all expectations! The designs were exactly as we wanted, the taste was delicious and not overly sweet, and both were delivered on time in perfect condition. Highly recommended for any celebration!",
+      "language": null,
+      "published": "2026-08-22 14:58:05",
+      "last_edited": "2026-08-22 14:58:05",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmOYykZ6WnrigLWVNaKPWkQgHNE_wq-b4N02u9leBGDmIXOq-sm1Ea3mE-LSUH3sXBjS7H3MSdzYuO-aFqgAfUgJ1OWgkTCHE6QGIOOpJ0EURTBcdNWASAYKqtJBs2cVVU3uyYKOoojUWJ4=k-no"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmPSRfKKpIzyjSYpXcIoEIgfwmEy47io3GrVUzKeouQ2BDq309bf5thAqP55GOnTdvPAe8FYHlfSoQZP3AhyWvehuXd8iUFz1LnKeDAZmKdP9nxWisuyUtBhYksn6lS8ZFp8ksQ7NXXPV4o=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "2 days ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/24_rajni_bhandari.jpg"
+    },
+    {
+      "name": "Tarun Nagar",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocLZu2LO4TcWsVDoacJhDq1tsAPSOYM4xjB8zGAvS0jQMdQgIQ=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/101312841760861447894?hl=en",
+      "rating": 4,
+      "text": "Fresh and best quality and good quantity cakes and pastries , very delicious cakes , 10/10 baking spot",
+      "language": null,
+      "published": "2026-08-22 12:33:20",
+      "last_edited": "2026-08-22 12:33:20",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "2 days ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/25_tarun_nagar.jpg"
+    },
+    {
+      "name": "Ravi Kant Verma",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjUlQRSK96_6v7mtf8VwS9wHOuWdt1JtJHHJ9HVDv-vz4Lf4-cJt=s120-c-rp-mo-ba12-br100",
+      "url": "https://www.google.com/maps/contrib/102266568368777365705?hl=en",
+      "rating": 5,
+      "text": "3rd January 2026  को हमारी एक ग्रुप पार्टी थी जिसमें हमने ये केक बनवाया था। Flavour Black Current, सभी को बहुत पसंद आया।\nUnique Design\nFinishing in design work\nSuperb Taste\nFresh\nVery Good Packaging\n\nबहुत ही शानदार service 👌🏻👍🏻💐🤝🏆",
+      "language": null,
+      "published": "2026-01-06 07:49:01",
+      "last_edited": "2026-01-06 07:49:01",
+      "images": null,
+      "source": "Local Guide",
+      "response": {
+        "text": "Thanks ☺️ ",
+        "published": "2026-05-07 14:11:57",
+        "last_edited": "2026-05-07 14:11:57"
+      },
+      "relative_time": "7 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/26_ravi_kant_verma.jpg"
+    },
+    {
+      "name": "Shivani Khurana",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjVibIX7OC8KPzA1XkhY2HeWWyU9udngrGwwg9dsxgzsSPzPLl0=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/107525275173699448022?hl=en",
+      "rating": 5,
+      "text": null,
+      "language": null,
+      "published": "2026-05-10 22:16:57",
+      "last_edited": "2026-05-10 22:16:57",
+      "images": [
+        {
+          "url": "https://lh3.googleusercontent.com/grass-cs/ACvplmOeUmGMMmOwpBNYSTAnz2omit6QUsS4pVa1yxs3Xhs1DQtQYDQR8rJornmOY71TC9z640hYsYcAPZ5fDcLjUks7-4xw4d98g1zaLpGaYwOXY8OvdRH-kOV-BAa6H0dNQ1ijG8X2MF-bq8M=k-no"
+        }
+      ],
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/27_shivani_khurana.jpg"
+    },
+    {
+      "name": "Gomathi K",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocKaWWaJcnclrzzQmqqlBa2YpbWg6MccgWQK24ESCB593Kt5ew=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/105417691430909753858?hl=en",
+      "rating": 5,
+      "text": null,
+      "language": null,
+      "published": "2026-07-24 13:44:07",
+      "last_edited": "2026-07-24 13:44:07",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "a month ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/28_gomathi_k.jpg"
+    },
+    {
+      "name": "Dimple Sharma",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjXrtnLsCG0okfbJgvQRT5HOBRGpP4N74qjX2A9yfQ5mLAZi9Xat=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/101053860752830022474?hl=en",
+      "rating": 5,
+      "text": null,
+      "language": null,
+      "published": "2026-05-09 06:21:40",
+      "last_edited": "2026-05-09 06:21:40",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "3 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/29_dimple_sharma.jpg"
+    },
+    {
+      "name": "Rekha Rautela",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocKNpyBuroxK-xvHH4nPLsIxfBUt-LvaUW7PwsqYCQMgBE25_Q=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/118263976273016371326?hl=en",
+      "rating": 5,
+      "text": null,
+      "language": null,
+      "published": "2025-12-27 03:58:03",
+      "last_edited": "2025-12-27 03:58:03",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "7 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/30_rekha_rautela.jpg"
+    },
+    {
+      "name": "meena thakkar",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocLRTqDkvKKj1oN6YKC77C4dEA6-XfaAWjUgF752L1meo_9tmA=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/103617952789286777554?hl=en",
+      "rating": 5,
+      "text": null,
+      "language": null,
+      "published": "2025-09-09 03:33:31",
+      "last_edited": "2025-09-09 03:33:31",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "11 months ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/31_meena_thakkar.jpg"
+    },
+    {
+      "name": "Rashmi Singh",
+      "photo": "https://lh3.googleusercontent.com/a-/ALV-UjV7Q78kew-xEJSlVxNq6JEn6_poscAesUjLMFZ4fSwBAYQg1zTn=s120-c-rp-mo-br100",
+      "url": "https://www.google.com/maps/contrib/109454560917169309228?hl=en",
+      "rating": 5,
+      "text": null,
+      "language": null,
+      "published": "2025-01-12 15:43:09",
+      "last_edited": "2025-01-12 15:43:09",
+      "images": null,
+      "source": "Local Guide",
+      "response": null,
+      "relative_time": "a year ago",
+      "visited": null,
+      "localPhoto": "/reviews/avatars/32_rashmi_singh.jpg"
+    }
+  ],
+  "shareFeedbackUrl": "https://search.google.com/local/writereview?placeid=ChIJq-0Q8kXxDDkRBVh6pMu7wYs",
+  "sourceUrl": "https://www.google.com/maps/place/?q=place_id:ChIJq-0Q8kXxDDkRBVh6pMu7wYs",
+  "place_id": "ChIJq-0Q8kXxDDkRBVh6pMu7wYs",
+  "fetchedAt": 1787651294,
+  "hitMaxLimit": false,
+  "timedOut": false,
+  "partial": false
+}

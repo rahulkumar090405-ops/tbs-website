@@ -7,7 +7,7 @@ import WhyTBS from '../components/WhyTBS';
 import Comparison from '../components/Comparison';
 import CustomCake from '../components/CustomCake';
 import OrderInfo from '../components/OrderInfo';
-import Gallery from '../components/Gallery';
+import InstagramFeed from '../components/InstagramFeed';
 import Reviews from '../components/Reviews';
 import FinalCTA from '../components/FinalCTA';
 
@@ -22,7 +22,7 @@ export default function HomePage() {
       <Comparison />
       <CustomCake />
       <OrderInfo />
-      <Gallery />
+      <InstagramFeed />
       <Reviews />
       <FinalCTA />
     </>

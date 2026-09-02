@@ -29,14 +29,14 @@ function AntiGravityParticles() {
 
     setCanvasSize();
 
-    // Particle pool (approx 40 particles)
-    const particleCount = 42;
+    // Particle pool (approx 35 particles for optimal performance)
+    const particleCount = 35;
     const colors = [
-      { r: 216, g: 174, b: 230, alpha: 0.45 }, // soft lavender
-      { r: 234, g: 196, b: 83, alpha: 0.6 },   // golden shimmer
-      { r: 184, g: 146, b: 35, alpha: 0.35 },  // cocoa gold
-      { r: 255, g: 255, b: 255, alpha: 0.7 },  // pure starlight
-      { r: 16, g: 185, b: 129, alpha: 0.3 },   // fresh mint
+      { r: 216, g: 174, b: 230, alpha: 0.4 }, // soft lavender
+      { r: 234, g: 196, b: 83, alpha: 0.55 }, // golden shimmer
+      { r: 184, g: 146, b: 35, alpha: 0.3 },  // cocoa gold
+      { r: 255, g: 255, b: 255, alpha: 0.6 }, // starlight
+      { r: 16, g: 185, b: 129, alpha: 0.25 }, // fresh mint
     ];
 
     const particles = Array.from({ length: particleCount }, () => {
@@ -44,10 +44,10 @@ function AntiGravityParticles() {
       return {
         x: Math.random() * rect.width,
         y: Math.random() * rect.height,
-        radius: Math.random() * 2.2 + 0.6,
+        radius: Math.random() * 2 + 0.5,
         color: colors[Math.floor(Math.random() * colors.length)],
-        speedY: Math.random() * 0.4 + 0.15, // float upwards
-        speedX: (Math.random() - 0.5) * 0.2, // slight horizontal drift
+        speedY: Math.random() * 0.35 + 0.12,
+        speedX: (Math.random() - 0.5) * 0.15,
         sinOffset: Math.random() * Math.PI * 2,
         sinSpeed: Math.random() * 0.02 + 0.01,
         pulseSpeed: Math.random() * 0.03 + 0.01,
@@ -65,11 +65,9 @@ function AntiGravityParticles() {
       time += 1;
 
       particles.forEach((p) => {
-        // Anti-gravity upward float with sinusoidal oscillation
         p.y -= p.speedY;
-        p.x += Math.sin(time * p.sinSpeed + p.sinOffset) * 0.4 + p.speedX;
+        p.x += Math.sin(time * p.sinSpeed + p.sinOffset) * 0.3 + p.speedX;
 
-        // Wrap around when particle floats off top
         if (p.y < -10) {
           p.y = rect.height + 10;
           p.x = Math.random() * rect.width;
@@ -77,7 +75,6 @@ function AntiGravityParticles() {
         if (p.x < -10) p.x = rect.width + 10;
         if (p.x > rect.width + 10) p.x = -10;
 
-        // Pulsing glow
         const currentAlpha =
           p.color.alpha *
           (0.7 + Math.sin(time * p.pulseSpeed + p.sinOffset) * 0.3) *
@@ -88,7 +85,7 @@ function AntiGravityParticles() {
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${currentAlpha})`;
         ctx.shadowColor = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${currentAlpha * 0.8})`;
-        ctx.shadowBlur = p.radius * 3;
+        ctx.shadowBlur = p.radius * 2.5;
         ctx.fill();
         ctx.restore();
       });
@@ -96,7 +93,6 @@ function AntiGravityParticles() {
       animationFrameId = requestAnimationFrame(render);
     };
 
-    // Pause when out of screen for maximum performance
     const observer = new IntersectionObserver(([entry]) => {
       isVisible = entry.isIntersecting;
       if (isVisible) {
@@ -130,6 +126,7 @@ export default function Comparison() {
   const [hoveredRow, setHoveredRow] = useState(null);
   const cardRef = useRef(null);
   const containerRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   // 3D Parallax & Gyroscope Physics State
   const mouseState = useRef({
@@ -138,57 +135,65 @@ export default function Comparison() {
     targetRotX: 0,
     targetRotY: 0,
     isHovering: false,
-    isTouchDevice: false,
   });
 
   const [shadowStyle, setShadowStyle] = useState({});
 
   useEffect(() => {
-    // Detect touch / mobile devices
-    mouseState.current.isTouchDevice =
-      'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const checkViewport = () => {
+      // Enable 3D tilt only on desktop screens with fine pointer
+      const desktopMatch =
+        window.innerWidth >= 1024 &&
+        window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      setIsDesktop(desktopMatch);
+    };
+
+    checkViewport();
+    window.addEventListener('resize', checkViewport);
 
     let animId;
     let clock = 0;
 
     const updatePhysics = () => {
       clock += 0.025;
-      const { isHovering, isTouchDevice } = mouseState.current;
-
-      // When hovering on desktop, lerp towards mouse rotation
-      // When idle on desktop or mobile, blend with a natural zero-gravity floating oscillation
+      const { isHovering } = mouseState.current;
       const lerpFactor = 0.08;
 
-      if (isHovering && !isTouchDevice) {
-        mouseState.current.currentRotX +=
-          (mouseState.current.targetRotX - mouseState.current.currentRotX) * lerpFactor;
-        mouseState.current.currentRotY +=
-          (mouseState.current.targetRotY - mouseState.current.currentRotY) * lerpFactor;
+      if (isDesktop) {
+        if (isHovering) {
+          mouseState.current.currentRotX +=
+            (mouseState.current.targetRotX - mouseState.current.currentRotX) * lerpFactor;
+          mouseState.current.currentRotY +=
+            (mouseState.current.targetRotY - mouseState.current.currentRotY) * lerpFactor;
+        } else {
+          const idleRotX = Math.sin(clock * 0.8) * 1.5;
+          const idleRotY = Math.cos(clock * 0.6) * 1.8;
+          mouseState.current.currentRotX +=
+            (idleRotX - mouseState.current.currentRotX) * 0.05;
+          mouseState.current.currentRotY +=
+            (idleRotY - mouseState.current.currentRotY) * 0.05;
+        }
+
+        if (cardRef.current) {
+          const rotX = mouseState.current.currentRotX.toFixed(2);
+          const rotY = mouseState.current.currentRotY.toFixed(2);
+          const idleY = (Math.sin(clock * 1.2) * 6).toFixed(2);
+
+          cardRef.current.style.transform = `perspective(1200px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(${idleY}px) translateZ(16px)`;
+
+          const shadowX = (-rotY * 1.8).toFixed(1);
+          const shadowY = (parseFloat(rotX) * 1.8 + 24).toFixed(1);
+          const shadowBlur = (36 + Math.abs(parseFloat(rotX)) * 2).toFixed(1);
+
+          setShadowStyle({
+            boxShadow: `${shadowX}px ${shadowY}px ${shadowBlur}px -10px rgba(90, 28, 112, 0.18), 0 10px 20px -5px rgba(0, 0, 0, 0.04)`,
+          });
+        }
       } else {
-        // Gentle anti-gravity bobbing when cursor is idle
-        const idleRotX = Math.sin(clock * 0.8) * 1.5;
-        const idleRotY = Math.cos(clock * 0.6) * 2;
-        mouseState.current.currentRotX +=
-          (idleRotX - mouseState.current.currentRotX) * 0.05;
-        mouseState.current.currentRotY +=
-          (idleRotY - mouseState.current.currentRotY) * 0.05;
-      }
-
-      if (cardRef.current && !isTouchDevice) {
-        const rotX = mouseState.current.currentRotX.toFixed(2);
-        const rotY = mouseState.current.currentRotY.toFixed(2);
-        const idleY = (Math.sin(clock * 1.2) * 6).toFixed(2);
-
-        cardRef.current.style.transform = `perspective(1200px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(${idleY}px) translateZ(16px)`;
-
-        // Calculate dynamic light-source shadow based on tilt angle
-        const shadowX = (-rotY * 1.8).toFixed(1);
-        const shadowY = (parseFloat(rotX) * 1.8 + 28).toFixed(1);
-        const shadowBlur = (40 + Math.abs(parseFloat(rotX)) * 2).toFixed(1);
-
-        setShadowStyle({
-          boxShadow: `${shadowX}px ${shadowY}px ${shadowBlur}px -10px rgba(90, 28, 112, 0.18), 0 10px 20px -5px rgba(0, 0, 0, 0.04)`,
-        });
+        if (cardRef.current) {
+          cardRef.current.style.transform = '';
+          setShadowStyle({});
+        }
       }
 
       animId = requestAnimationFrame(updatePhysics);
@@ -196,12 +201,15 @@ export default function Comparison() {
 
     animId = requestAnimationFrame(updatePhysics);
 
-    return () => cancelAnimationFrame(animId);
-  }, []);
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener('resize', checkViewport);
+    };
+  }, [isDesktop]);
 
   // Desktop Mouse Parallax Handlers
   const handleMouseMove = (e) => {
-    if (mouseState.current.isTouchDevice || !containerRef.current) return;
+    if (!isDesktop || !containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -209,9 +217,8 @@ export default function Comparison() {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    // Max 10 deg X tilt, 14 deg Y tilt
-    mouseState.current.targetRotX = -((y - centerY) / centerY) * 9;
-    mouseState.current.targetRotY = ((x - centerX) / centerX) * 12;
+    mouseState.current.targetRotX = -((y - centerY) / centerY) * 8;
+    mouseState.current.targetRotY = ((x - centerX) / centerX) * 10;
     mouseState.current.isHovering = true;
   };
 
@@ -223,93 +230,89 @@ export default function Comparison() {
 
   return (
     <section
-      id="comparison"
+      id="why-us"
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="py-20 md:py-32 bg-cream-50 relative overflow-hidden select-none"
+      className="py-14 sm:py-20 md:py-28 bg-cream-50 relative overflow-hidden"
     >
       {/* 1. Background Ambient Anti-Gravity Particle Simulation */}
       <AntiGravityParticles />
 
       {/* 2. Soft Lavender & Gold Radial Back-Glows */}
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-200/35 rounded-full blur-[110px] pointer-events-none -z-10" />
-      <div className="absolute bottom-1/4 right-1/4 w-[480px] h-[480px] bg-gold-400/15 rounded-full blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] bg-brand-200/30 rounded-full blur-[80px] sm:blur-[110px] pointer-events-none -z-10" />
+      <div className="absolute bottom-1/4 right-1/4 w-[300px] sm:w-[480px] h-[300px] sm:h-[480px] bg-gold-400/12 rounded-full blur-[70px] sm:blur-[100px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-100/90 text-brand-900 border border-brand-200/80 text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/90 text-brand-900 border border-brand-200/80 text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3 sm:mb-4 shadow-xs">
             <Scale className="w-3.5 h-3.5 text-brand-700" />
             <span>Honest Craftsmanship & Quality</span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal-900 tracking-tight mb-4">
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-charcoal-900 tracking-tight mb-2.5 sm:mb-4">
             The Difference Is Clear
           </h2>
 
-          <p className="text-base sm:text-lg text-charcoal-600 font-light max-w-xl mx-auto">
+          <p className="text-xs sm:text-base text-charcoal-600 font-light max-w-xl mx-auto px-2">
             Experience the elevated purity of boutique artisanal baking vs commercial mass-market production.
           </p>
         </div>
 
-        {/* Comparison Cards: Side-by-Side 3D Perspective Plane */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-stretch perspective-1200">
+        {/* Comparison Cards: Responsive 2-Card Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-5xl mx-auto items-stretch lg:perspective-1200">
           
           {/* ======================================================== */}
-          {/* 🌟 THE BAKING SPOT (Elevated Anti-Gravity Levitating Card) */}
+          {/* 🌟 THE BAKING SPOT (Elevated Anti-Gravity Card)            */}
           {/* ======================================================== */}
           <div
             ref={cardRef}
-            style={shadowStyle}
-            className="relative rounded-3xl bg-white/95 backdrop-blur-xl p-6 sm:p-9 md:p-10 border-2 border-brand-500/90 transition-shadow duration-300 preserve-3d order-1 flex flex-col justify-between"
+            style={isDesktop ? shadowStyle : undefined}
+            className={`relative rounded-2xl sm:rounded-3xl bg-white/95 backdrop-blur-md p-4 sm:p-7 md:p-9 border-2 border-brand-500/90 shadow-lg shadow-brand-900/10 transition-all duration-300 ${
+              isDesktop ? 'preserve-3d' : 'animate-anti-gravity'
+            } order-1 flex flex-col justify-between`}
           >
-            {/* Ambient Inner Glowing Edge Reflection */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-brand-100/30 via-transparent to-brand-50/20 pointer-events-none" />
+            {/* Ambient Inner Glowing Reflection */}
+            <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-brand-100/30 via-transparent to-brand-50/20 pointer-events-none" />
 
-            {/* Floating 3D Badge: "★ THE BAKING SPOT STANDARD" (Foreground Z=36px) */}
+            {/* Top Badge: "★ THE BAKING SPOT STANDARD" (No logo, clean pill) */}
             <div
-              style={{ transform: 'translateZ(36px)' }}
-              className="absolute -top-3.5 left-6 sm:left-8 px-4 py-1.5 rounded-full bg-gradient-to-r from-brand-800 to-brand-700 text-white text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-brand-900/25 border border-brand-400/40"
+              style={isDesktop ? { transform: 'translateZ(32px)' } : undefined}
+              className="absolute -top-3 left-4 sm:left-6 px-3 sm:px-4 py-1 rounded-full bg-gradient-to-r from-brand-800 to-brand-700 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-md shadow-brand-900/20 border border-brand-400/40 z-20"
             >
-              <Sparkles className="w-3.5 h-3.5 text-gold-400 animate-pulse" />
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-gold-400 animate-pulse" />
               <span>THE BAKING SPOT STANDARD</span>
             </div>
 
             <div>
-              {/* Card Header with Floating Brand Seal */}
+              {/* Card Header (Clean & balanced without logo) */}
               <div
-                style={{ transform: 'translateZ(26px)' }}
-                className="flex items-center justify-between pb-6 border-b border-brand-100/80 mt-3 mb-6"
+                style={isDesktop ? { transform: 'translateZ(24px)' } : undefined}
+                className="pb-4 sm:pb-5 border-b border-brand-100/80 mt-2 sm:mt-1 mb-4 sm:mb-6"
               >
-                <div>
+                <div className="flex flex-wrap items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-serif text-2xl sm:text-3xl font-bold text-brand-950">
+                    <h3 className="font-serif text-lg sm:text-2xl md:text-3xl font-bold text-brand-950">
                       THE BAKING SPOT
                     </h3>
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-wider">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider">
                       <Leaf className="w-2.5 h-2.5" />
                       100% Pure
                     </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-brand-700 font-medium tracking-wide mt-0.5">
-                    Purely Homemade • Baked Fresh to Order
-                  </p>
+                  <span className="text-[10px] sm:text-xs text-brand-700 font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 border border-brand-100">
+                    Boutique Bakehouse
+                  </span>
                 </div>
-
-                {/* Floating Official Circular Hallmark */}
-                <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-brand-100 to-brand-50 border border-brand-200 p-1.5 flex items-center justify-center flex-shrink-0 shadow-md shadow-brand-700/10 hover:rotate-6 transition-transform">
-                  <img
-                    src="/assets/tbs-logo.png"
-                    alt="tBS Logo Hallmark"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+                <p className="text-[11px] sm:text-xs md:text-sm text-brand-700 font-medium tracking-wide mt-1">
+                  Purely Homemade • Baked Fresh to Order
+                </p>
               </div>
 
               {/* Interactive Rows: TBS Checkmarks */}
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-2.5">
                 {COMPARISON_DATA.tbs.map((item, idx) => {
                   const isHovered = hoveredRow === idx;
                   const isOtherHovered = hoveredRow !== null && hoveredRow !== idx;
@@ -319,34 +322,39 @@ export default function Comparison() {
                       key={idx}
                       onMouseEnter={() => setHoveredRow(idx)}
                       onMouseLeave={() => setHoveredRow(null)}
-                      style={{
-                        transform: isHovered
-                          ? 'translateZ(34px) translateY(-2px)'
-                          : 'translateZ(18px)',
-                        transition: 'all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                      }}
-                      className={`flex items-center gap-3.5 p-3 rounded-2xl cursor-pointer border transition-all ${
+                      onClick={() => setHoveredRow(hoveredRow === idx ? null : idx)}
+                      style={
+                        isDesktop
+                          ? {
+                              transform: isHovered
+                                ? 'translateZ(30px) translateY(-2px)'
+                                : 'translateZ(14px)',
+                              transition: 'all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                            }
+                          : undefined
+                      }
+                      className={`flex items-center gap-2.5 sm:gap-3.5 p-2 sm:p-2.5 md:p-3 rounded-xl sm:rounded-2xl cursor-pointer border transition-all ${
                         isHovered
-                          ? 'bg-gradient-to-r from-brand-100/95 via-brand-50/95 to-white border-brand-400 shadow-md shadow-brand-700/15'
+                          ? 'bg-gradient-to-r from-brand-100/95 via-brand-50/95 to-white border-brand-400 shadow-md shadow-brand-700/15 ring-1 ring-brand-300'
                           : isOtherHovered
-                          ? 'bg-brand-50/40 border-brand-100/60 opacity-80'
+                          ? 'bg-brand-50/30 border-brand-100/60 opacity-85'
                           : 'bg-brand-50/60 border-brand-100/80 hover:bg-brand-50'
                       }`}
                     >
-                      {/* Lush Emerald Green Glow Checkmark */}
+                      {/* Lush Emerald Green Checkmark */}
                       <div
-                        className={`w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-all ${
+                        className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center flex-shrink-0 shadow-xs transition-all ${
                           isHovered
-                            ? 'bg-emerald-500 text-white scale-110 shadow-emerald-500/40 ring-2 ring-emerald-300'
+                            ? 'bg-emerald-500 text-white scale-110 shadow-emerald-500/40'
                             : 'bg-emerald-500 text-white'
                         }`}
                       >
-                        <Check className="w-4 h-4 stroke-[3]" />
+                        <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
                       </div>
 
                       <span
-                        className={`text-xs sm:text-sm font-semibold transition-colors ${
-                          isHovered ? 'text-brand-950 font-bold' : 'text-charcoal-900'
+                        className={`text-xs sm:text-sm leading-snug transition-colors ${
+                          isHovered ? 'text-brand-950 font-bold' : 'text-charcoal-900 font-semibold'
                         }`}
                       >
                         {item}
@@ -357,50 +365,49 @@ export default function Comparison() {
               </div>
             </div>
 
-            {/* Bottom 3D Trust Stamp Pill (Foreground Z=24px) */}
+            {/* Bottom Trust Stamp Pill */}
             <div
-              style={{ transform: 'translateZ(24px)' }}
-              className="mt-6 pt-5 border-t border-brand-100 flex items-center justify-between text-xs text-charcoal-600 font-medium"
+              style={isDesktop ? { transform: 'translateZ(20px)' } : undefined}
+              className="mt-4 sm:mt-6 pt-3.5 sm:pt-4 border-t border-brand-100 flex items-center justify-between text-[10px] sm:text-xs text-charcoal-600 font-medium"
             >
-              <div className="flex items-center gap-1.5 text-brand-900 font-semibold">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <div className="flex items-center gap-1 sm:gap-1.5 text-brand-900 font-semibold">
+                <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 flex-shrink-0" />
                 <span>Zero Compromises Guaranteed</span>
               </div>
-              <span className="text-[10px] text-brand-600 uppercase font-bold tracking-wider">
+              <span className="text-[9px] sm:text-[10px] text-brand-700 uppercase font-bold tracking-wider">
                 100% Eggless Options
               </span>
             </div>
           </div>
 
           {/* ======================================================== */}
-          {/* 🪨 OTHER BAKERIES (Grounded, Heavy, Static Reality) */}
+          {/* 🪨 OTHER BAKERIES (Grounded, Heavy, Static Reality)       */}
           {/* ======================================================== */}
-          <div className="relative rounded-3xl bg-stone-100/80 p-6 sm:p-9 md:p-10 border border-stone-300/80 shadow-inner order-2 flex flex-col justify-between backdrop-blur-xs">
+          <div className="relative rounded-2xl sm:rounded-3xl bg-stone-100/90 p-4 sm:p-7 md:p-9 border border-stone-300/90 shadow-sm order-2 flex flex-col justify-between">
             
-            {/* Heavy Grounded Anchor Stamp */}
-            <div className="absolute -top-3.5 right-6 sm:right-8 px-3.5 py-1 rounded-full bg-stone-300 text-stone-700 text-[10px] font-bold uppercase tracking-wider border border-stone-400/50">
+            {/* Top Tag: Commercial Norms */}
+            <div className="absolute -top-3 right-4 sm:right-6 px-3 sm:px-3.5 py-1 rounded-full bg-stone-300 text-stone-700 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider border border-stone-400/50">
               Commercial Industry Norms
             </div>
 
             <div>
               {/* Header */}
-              <div className="flex items-center justify-between pb-6 border-b border-stone-200 mt-3 mb-6">
-                <div>
-                  <h3 className="font-serif text-2xl sm:text-3xl font-bold text-stone-600">
+              <div className="pb-4 sm:pb-5 border-b border-stone-200 mt-2 sm:mt-1 mb-4 sm:mb-6">
+                <div className="flex items-center justify-between gap-2">
+                  <h3 className="font-serif text-lg sm:text-2xl md:text-3xl font-bold text-stone-600">
                     OTHER BAKERIES
                   </h3>
-                  <p className="text-xs sm:text-sm text-stone-500 font-medium">
-                    Commercial Mass Production & Storage
-                  </p>
+                  <span className="text-[10px] sm:text-xs text-stone-500 font-medium px-2.5 py-0.5 rounded-full bg-stone-200/80">
+                    Mass Retail
+                  </span>
                 </div>
-
-                <div className="w-12 h-12 rounded-2xl bg-stone-200 text-stone-500 flex items-center justify-center font-bold text-base shadow-inner">
-                  ✕
-                </div>
+                <p className="text-[11px] sm:text-xs md:text-sm text-stone-500 font-medium mt-1">
+                  Commercial Mass Production & Display Cabinets
+                </p>
               </div>
 
-              {/* Rows: Dim and blur when corresponding TBS row is hovered */}
-              <div className="space-y-3">
+              {/* Rows */}
+              <div className="space-y-2 sm:space-y-2.5">
                 {COMPARISON_DATA.others.map((item, idx) => {
                   const isCorrespondingHovered = hoveredRow === idx;
 
@@ -409,21 +416,22 @@ export default function Comparison() {
                       key={idx}
                       onMouseEnter={() => setHoveredRow(idx)}
                       onMouseLeave={() => setHoveredRow(null)}
+                      onClick={() => setHoveredRow(hoveredRow === idx ? null : idx)}
                       style={{
-                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
                       }}
-                      className={`flex items-center gap-3.5 p-3 rounded-2xl border transition-all ${
+                      className={`flex items-center gap-2.5 sm:gap-3.5 p-2 sm:p-2.5 md:p-3 rounded-xl sm:rounded-2xl border transition-all ${
                         isCorrespondingHovered
-                          ? 'bg-stone-200/50 border-stone-300 opacity-35 scale-[0.98] blur-[1px] grayscale'
-                          : 'bg-stone-50/70 border-stone-200/70 opacity-90'
+                          ? 'bg-stone-200/70 border-stone-300 opacity-40 scale-[0.98] blur-[0.5px] grayscale'
+                          : 'bg-stone-50/80 border-stone-200/70 opacity-90'
                       }`}
                     >
-                      <div className="w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-full bg-rose-400 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
-                        <X className="w-4 h-4 stroke-[2.5]" />
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-rose-400 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+                        <X className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
                       </div>
 
                       <span
-                        className={`text-xs sm:text-sm font-normal text-stone-600 ${
+                        className={`text-xs sm:text-sm leading-snug font-normal text-stone-600 ${
                           isCorrespondingHovered ? 'line-through decoration-rose-400' : 'line-through decoration-stone-400'
                         }`}
                       >
@@ -436,8 +444,8 @@ export default function Comparison() {
             </div>
 
             {/* Bottom Grounded Note */}
-            <div className="mt-6 pt-5 border-t border-stone-200 text-xs text-stone-500 font-normal">
-              <p>Made with shelf-life extensions, premix flours, and industrial preservatives.</p>
+            <div className="mt-4 sm:mt-6 pt-3.5 sm:pt-4 border-t border-stone-200 text-[10px] sm:text-xs text-stone-500 font-normal">
+              <p>Made with shelf-life extensions, premix flours, and industrial fats.</p>
             </div>
           </div>
 

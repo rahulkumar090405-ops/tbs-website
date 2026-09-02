@@ -6,6 +6,7 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
+import GalleryPage from './pages/GalleryPage';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/menu" element={<ProductsPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             {/* Fallback route */}
             <Route path="*" element={<HomePage />} />
           </Routes>

@@ -26,6 +26,7 @@ export default function Footer() {
   const links = [
     { name: 'Home', to: '/' },
     { name: 'All Products (Menu)', to: '/products' },
+    { name: 'Visual Gallery', to: '/gallery' },
     { name: 'Signature Highlights', to: '/#signature' },
     { name: 'Our Story', to: '/#story' },
     { name: 'Why tBS', to: '/#why-us' },

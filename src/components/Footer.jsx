@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Clock, MapPin, MessageCircle, Heart } from 'lucide-react';
 import { BRAND_INFO, DISPLAY_PHONE, RAW_PHONE } from '../data/menuData';
 import { createGeneralWhatsAppLink } from '../utils/whatsapp';
@@ -23,14 +24,14 @@ function InstagramIcon({ className = "w-4 h-4" }) {
 
 export default function Footer() {
   const links = [
-    { name: 'Home', href: '#hero' },
-    { name: 'Our Story', href: '#story' },
-    { name: 'Signature Cakes', href: '#signature' },
-    { name: 'Full Menu', href: '#menu' },
-    { name: 'Why tBS', href: '#why-us' },
-    { name: 'Custom Cake', href: '#customise' },
-    { name: 'Google Reviews', href: '#reviews' },
-    { name: 'Order Info', href: '#order-info' },
+    { name: 'Home', to: '/' },
+    { name: 'All Products (Menu)', to: '/products' },
+    { name: 'Signature Highlights', to: '/#signature' },
+    { name: 'Our Story', to: '/#story' },
+    { name: 'Why tBS', to: '/#why-us' },
+    { name: 'Custom Cake', to: '/#customise' },
+    { name: 'Google Reviews', to: '/#reviews' },
+    { name: 'Order Info', to: '/#order-info' },
   ];
 
   return (
@@ -39,14 +40,16 @@ export default function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-charcoal-700/60">
           
-          {/* Col 1: Brand & Logo (Using official footer logo from Downloads) */}
+          {/* Col 1: Brand & Logo */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <img
-                src="/assets/tbs-footer-logo.png"
-                alt="tBS THE BAKING SPOT"
-                className="h-11 sm:h-13 w-auto object-contain"
-              />
+              <Link to="/">
+                <img
+                  src="/assets/tbs-footer-logo.png"
+                  alt="tBS THE BAKING SPOT"
+                  className="h-11 sm:h-13 w-auto object-contain"
+                />
+              </Link>
             </div>
 
             <p className="font-serif italic text-sm text-brand-200/90 font-light">
@@ -79,12 +82,12 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               {links.map((l) => (
                 <li key={l.name}>
-                  <a
-                    href={l.href}
+                  <Link
+                    to={l.to}
                     className="text-charcoal-300 hover:text-brand-300 transition-colors"
                   >
                     {l.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

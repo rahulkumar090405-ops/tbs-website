@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, MessageCircle, ArrowDown, Heart, ShieldCheck, Award, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Sparkles, MessageCircle, Heart, ShieldCheck, Award, ChevronLeft, ChevronRight, Cake } from 'lucide-react';
 import { createGeneralWhatsAppLink, createWhatsAppOrderLink } from '../utils/whatsapp';
 
 export default function Hero() {
@@ -90,13 +91,13 @@ export default function Hero() {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-10">
-              <a
-                href="#signature"
+              <Link
+                to="/products"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-brand-700 hover:bg-brand-800 text-white font-semibold text-sm tracking-wide transition-all shadow-lg shadow-brand-700/25 hover:shadow-brand-700/35 hover:-translate-y-0.5 active:translate-y-0"
               >
-                <span>Explore Our Cakes</span>
-                <ArrowDown className="w-4 h-4" />
-              </a>
+                <Cake className="w-4 h-4" />
+                <span>Explore All Cakes</span>
+              </Link>
 
               <a
                 href={createGeneralWhatsAppLink()}

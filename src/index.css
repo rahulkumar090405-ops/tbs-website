@@ -80,6 +80,32 @@
   transform: rotate(30deg) translateX(100%);
 }
 
+/* 3D Perspective & Anti-Gravity Utilities */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+@keyframes anti-gravity-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.3deg);
+  }
+}
+
+.animate-anti-gravity {
+  animation: anti-gravity-float 4.5s ease-in-out infinite;
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
@@ -89,3 +115,4 @@
     scroll-behavior: auto !important;
   }
 }
+

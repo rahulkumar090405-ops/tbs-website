@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Clock, MapPin, MessageCircle, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { BRAND_INFO, DISPLAY_PHONE, RAW_PHONE } from '../data/menuData';
 import { createGeneralWhatsAppLink } from '../utils/whatsapp';
 
@@ -22,32 +23,37 @@ function InstagramIcon({ className = "w-4 h-4" }) {
 }
 
 export default function Footer() {
-  const links = [
-    { name: 'Home', href: '#hero' },
-    { name: 'Our Story', href: '#story' },
-    { name: 'Signature Cakes', href: '#signature' },
-    { name: 'Full Menu', href: '#menu' },
-    { name: 'Why tBS', href: '#why-us' },
-    { name: 'Custom Cake', href: '#customise' },
-    { name: 'Google Reviews', href: '#reviews' },
-    { name: 'Order Info', href: '#order-info' },
+  const menuLinks = [
+    { name: 'All Menus', href: '/menu/all' },
+    { name: 'Cakes Menu', href: '/menu/cakes' },
+    { name: 'Desserts Menu', href: '/menu/desserts' },
+    { name: 'Snacks & Tea Bakes', href: '/menu/snacks' },
+    { name: 'Custom Cake Order', href: '/custom-cake' },
+  ];
+
+  const exploreLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'Our Story', href: '/#story' },
+    { name: 'Why tBS', href: '/#why-us' },
+    { name: 'Google Reviews', href: '/#reviews' },
+    { name: 'Order Guidelines', href: '/#order-info' },
   ];
 
   return (
     <footer className="bg-charcoal-900 text-cream-100 pt-16 pb-12 border-t border-brand-900/40 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-charcoal-700/60">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-charcoal-700/60">
           
-          {/* Col 1: Brand & Logo (Using official footer logo from Downloads) */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
+          {/* Col 1: Brand & Logo */}
+          <div className="lg:col-span-4 space-y-4">
+            <Link to="/" className="flex items-center gap-3">
               <img
                 src="/assets/tbs-footer-logo.png"
                 alt="tBS THE BAKING SPOT"
                 className="h-11 sm:h-13 w-auto object-contain"
               />
-            </div>
+            </Link>
 
             <p className="font-serif italic text-sm text-brand-200/90 font-light">
               "{BRAND_INFO.tagline}"
@@ -71,13 +77,33 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
+          {/* Col 2: Independent Menus */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-serif font-bold text-sm uppercase tracking-wider text-white">
-              Navigation
+              Menu Collections
             </h4>
             <ul className="space-y-2 text-xs">
-              {links.map((l) => (
+              {menuLinks.map((l) => (
+                <li key={l.name}>
+                  <Link
+                    to={l.href}
+                    className="text-charcoal-300 hover:text-brand-300 transition-colors flex items-center gap-1.5"
+                  >
+                    <span className="text-brand-400">•</span>
+                    <span>{l.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 3: Quick Links */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="font-serif font-bold text-sm uppercase tracking-wider text-white">
+              Explore
+            </h4>
+            <ul className="space-y-2 text-xs">
+              {exploreLinks.map((l) => (
                 <li key={l.name}>
                   <a
                     href={l.href}
@@ -90,8 +116,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Contact & Timings */}
-          <div className="lg:col-span-4 space-y-3 text-xs">
+          {/* Col 4: Contact & Timings */}
+          <div className="lg:col-span-3 space-y-3 text-xs">
             <h4 className="font-serif font-bold text-sm uppercase tracking-wider text-white">
               Bakehouse Details
             </h4>

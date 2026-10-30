@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, MessageCircle, Heart, Check, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SIGNATURE_CAKES } from '../data/menuData';
 import { createWhatsAppOrderLink } from '../utils/whatsapp';
 
@@ -50,13 +51,13 @@ export default function FeaturedCakes() {
             </p>
           </div>
 
-          <a
-            href="#menu"
+          <Link
+            to="/menu/all"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-brand-700 hover:text-brand-900 py-2 border-b-2 border-brand-700 transition-all self-start md:self-auto"
           >
-            <span>View Complete Menu (45+ Items)</span>
+            <span>View All Menus (49+ Items)</span>
             <ChevronRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
 
         {/* 6 Signature Cake Grid */}

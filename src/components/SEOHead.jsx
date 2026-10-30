@@ -14,6 +14,33 @@ const DEFAULT_SEO = {
 };
 
 const ROUTE_SEO = {
+  '/': {
+    title: 'The Baking Spot | Freshly Baked Cakes, Desserts & Premium Bakery Menu',
+    description: 'Explore delicious homemade cakes, premium desserts, muffins, cookies and freshly baked treats at The Baking Spot. Discover our menu and order your favourites online.',
+    canonical: 'https://www.thebakingspot.com/',
+    ogTitle: 'The Baking Spot | Freshly Baked Cakes & Desserts',
+    ogDescription: 'Explore our delicious homemade cakes, premium desserts, muffins and freshly baked treats.',
+    ogImage: 'https://www.thebakingspot.com/the-baking-spot-cake-menu-social.jpg',
+    ogUrl: 'https://www.thebakingspot.com/',
+  },
+  '/menu': {
+    title: 'The Baking Spot | Bakery Menu - Cakes, Desserts & Snacks',
+    description: 'Explore our complete menu of cakes, desserts, muffins and snacks handcrafted fresh with love.',
+    canonical: 'https://www.thebakingspot.com/menu',
+    ogTitle: 'The Baking Spot | Complete Bakery Menu',
+    ogDescription: 'Explore our complete menu of cakes, desserts, muffins and snacks handcrafted fresh with love.',
+    ogImage: 'https://www.thebakingspot.com/the-baking-spot-cake-menu-social.jpg',
+    ogUrl: 'https://www.thebakingspot.com/menu',
+  },
+  '/menu/all': {
+    title: 'The Baking Spot | Bakery Menu - Cakes, Desserts & Snacks',
+    description: 'Explore our complete menu of cakes, desserts, muffins and snacks handcrafted fresh with love.',
+    canonical: 'https://www.thebakingspot.com/menu/all',
+    ogTitle: 'The Baking Spot | Complete Bakery Menu',
+    ogDescription: 'Explore our complete menu of cakes, desserts, muffins and snacks handcrafted fresh with love.',
+    ogImage: 'https://www.thebakingspot.com/the-baking-spot-cake-menu-social.jpg',
+    ogUrl: 'https://www.thebakingspot.com/menu/all',
+  },
   '/menu/cakes': {
     title: 'The Baking Spot | Freshly Baked Cakes, Desserts & Premium Bakery Menu',
     description: 'Explore delicious homemade cakes, premium desserts, muffins, cookies and freshly baked treats at The Baking Spot. Discover our menu and order your favourites online.',

@@ -8,7 +8,8 @@ import {
   Cake,
   PieChart,
   Coffee,
-  Utensils
+  Utensils,
+  Image as GalleryIcon
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { DISPLAY_PHONE, RAW_PHONE } from '../data/menuData';
@@ -37,7 +38,6 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
-  const [mobileMenuExpanded, setMobileMenuExpanded] = useState(true);
   const dropdownRef = useRef(null);
   const location = useLocation();
 
@@ -66,12 +66,7 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Original navbar links with MENU containing subheaders
-  const navLinksBeforeMenu = [
-    { name: 'Home', href: '/' },
-    { name: 'Our Story', href: '/#story' },
-  ];
-
+  // Menu subheaders linking to each section
   const menuSubheaders = [
     {
       name: 'Cakes',
@@ -100,13 +95,14 @@ export default function Navbar() {
   ];
 
   const navLinksAfterMenu = [
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Why tBS', href: '/#why-us' },
     { name: 'Customisation', href: '/custom-cake' },
     { name: 'Reviews', href: '/#reviews' },
     { name: 'Order Info', href: '/#order-info' },
   ];
 
-  const isMenuPath = location.pathname.startsWith('/menu');
+  const isMenuPath = location.pathname.startsWith('/menu') || location.pathname === '/products';
 
   return (
     <>
@@ -130,31 +126,26 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-6">
-              {/* Home & Our Story */}
-              {navLinksBeforeMenu.map((link) => (
-                link.href.startsWith('/#') ? (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-sm font-medium text-charcoal-700 hover:text-brand-700 transition-colors py-1"
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.name}
-                    to={link.href}
-                    className={`text-sm font-medium py-1 transition-colors ${
-                      location.pathname === link.href
-                        ? 'text-brand-900 font-bold border-b-2 border-brand-700'
-                        : 'text-charcoal-700 hover:text-brand-700'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                )
-              ))}
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+              {/* Home */}
+              <Link
+                to="/"
+                className={`text-sm font-medium py-1 transition-colors ${
+                  location.pathname === '/'
+                    ? 'text-brand-900 font-bold border-b-2 border-brand-700'
+                    : 'text-charcoal-700 hover:text-brand-700'
+                }`}
+              >
+                Home
+              </Link>
+
+              {/* Our Story */}
+              <a
+                href="/#story"
+                className="text-sm font-medium text-charcoal-700 hover:text-brand-700 transition-colors py-1"
+              >
+                Our Story
+              </a>
 
               {/* OUR MENU Dropdown (Desktop) */}
               <div
@@ -180,7 +171,7 @@ export default function Navbar() {
                   />
                 </Link>
 
-                {/* Dropdown Card - 100% Solid Opaque White Background */}
+                {/* Dropdown Card - 100% Solid Opaque White */}
                 {menuDropdownOpen && (
                   <div
                     className="absolute top-full left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-brand-200/90 p-2.5 z-[100]"
@@ -222,7 +213,7 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* Why tBS, Customisation, Reviews, Order Info */}
+              {/* Gallery, Why tBS, Customisation, Reviews, Order Info */}
               {navLinksAfterMenu.map((link) => (
                 link.href.startsWith('/#') ? (
                   <a
@@ -409,6 +400,16 @@ export default function Navbar() {
                     </Link>
                   </div>
                 </div>
+
+                {/* Gallery */}
+                <Link
+                  to="/gallery"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between px-3 py-2 rounded-xl text-sm font-semibold text-charcoal-800 hover:bg-brand-50"
+                >
+                  <span>Gallery</span>
+                  <ChevronRight className="w-4 h-4 opacity-50" />
+                </Link>
 
                 {/* Why tBS */}
                 <a

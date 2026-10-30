@@ -1,6 +1,6 @@
 import React from 'react';
-import { Phone, Clock, MapPin, MessageCircle, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Phone, Clock, MapPin, MessageCircle, Heart } from 'lucide-react';
 import { BRAND_INFO, DISPLAY_PHONE, RAW_PHONE } from '../data/menuData';
 import { createGeneralWhatsAppLink } from '../utils/whatsapp';
 
@@ -27,12 +27,13 @@ export default function Footer() {
     { name: 'All Menus', href: '/menu/all' },
     { name: 'Cakes Menu', href: '/menu/cakes' },
     { name: 'Desserts Menu', href: '/menu/desserts' },
-    { name: 'Snacks & Tea Bakes', href: '/menu/snacks' },
+    { name: 'Snacks & Bakes', href: '/menu/snacks' },
     { name: 'Custom Cake Order', href: '/custom-cake' },
   ];
 
   const exploreLinks = [
     { name: 'Home', href: '/' },
+    { name: 'Visual Gallery', href: '/gallery' },
     { name: 'Our Story', href: '/#story' },
     { name: 'Why tBS', href: '/#why-us' },
     { name: 'Google Reviews', href: '/#reviews' },
@@ -105,12 +106,21 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               {exploreLinks.map((l) => (
                 <li key={l.name}>
-                  <a
-                    href={l.href}
-                    className="text-charcoal-300 hover:text-brand-300 transition-colors"
-                  >
-                    {l.name}
-                  </a>
+                  {l.href.startsWith('/#') ? (
+                    <a
+                      href={l.href}
+                      className="text-charcoal-300 hover:text-brand-300 transition-colors"
+                    >
+                      {l.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={l.href}
+                      className="text-charcoal-300 hover:text-brand-300 transition-colors"
+                    >
+                      {l.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -155,9 +165,9 @@ export default function Footer() {
                 href={createGeneralWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-all shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-brand-800 hover:bg-brand-700 text-white font-semibold text-xs transition-all shadow-sm"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Chat on WhatsApp</span>
               </a>
             </div>
@@ -165,12 +175,12 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-charcoal-500 gap-4">
-          <p>© 2026 The Baking Spot. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            <span>Baked with</span>
-            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
+        {/* Bottom Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-charcoal-400">
+          <p>© {new Date().getFullYear()} {BRAND_INFO.name}. All rights reserved.</p>
+          <p className="flex items-center gap-1.5 text-charcoal-400 text-[11px]">
+            <span>Handcrafted with</span>
+            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline" />
             <span>for Prateek Grand City</span>
           </p>
         </div>

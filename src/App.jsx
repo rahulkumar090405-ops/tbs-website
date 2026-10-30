@@ -1,40 +1,12 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import BrandPromises from './components/BrandPromises';
-import OurStory from './components/OurStory';
-import WhyTBS from './components/WhyTBS';
-import Comparison from './components/Comparison';
-import FeaturedCakes from './components/FeaturedCakes';
-import Menu from './components/Menu';
-import MenuPage from './components/MenuPage';
-import CustomCake from './components/CustomCake';
-import OrderInfo from './components/OrderInfo';
-import Gallery from './components/Gallery';
-import Reviews from './components/Reviews';
-import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-
-function HomePage() {
-  return (
-    <>
-      <Hero />
-      <BrandPromises />
-      <OurStory />
-      <WhyTBS />
-      <Comparison />
-      <FeaturedCakes />
-      <Menu />
-      <CustomCake />
-      <OrderInfo />
-      <Gallery />
-      <Reviews />
-      <FinalCTA />
-    </>
-  );
-}
+import HomePage from './pages/HomePage';
+import MenuPage from './components/MenuPage';
+import CustomCake from './components/CustomCake';
+import GalleryPage from './pages/GalleryPage';
 
 // ScrollToTop on route transition
 function ScrollToTop() {
@@ -53,7 +25,7 @@ export default function App() {
       {/* Sticky Top Navigation */}
       <Navbar />
 
-      {/* Routing Configuration */}
+      {/* Page Content Routing */}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -62,17 +34,22 @@ export default function App() {
           <Route path="/menu/cakes" element={<MenuPage initialHub="cakes" />} />
           <Route path="/menu/desserts" element={<MenuPage initialHub="desserts" />} />
           <Route path="/menu/snacks" element={<MenuPage initialHub="snacks" />} />
-          <Route path="/custom-cake" element={
-            <div className="pt-24 pb-16">
-              <CustomCake />
-            </div>
-          } />
-          {/* Fallback to home */}
+          <Route path="/products" element={<MenuPage initialHub="all" />} />
+          <Route
+            path="/custom-cake"
+            element={
+              <div className="pt-24 pb-16">
+                <CustomCake />
+              </div>
+            }
+          />
+          <Route path="/gallery" element={<GalleryPage />} />
+          {/* Fallback route */}
           <Route path="*" element={<HomePage />} />
         </Routes>
       </main>
 
-      {/* Footer */}
+      {/* Global Footer */}
       <Footer />
 
       {/* Sticky Floating Mobile WhatsApp Quick Button */}

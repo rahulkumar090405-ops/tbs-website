@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import MenuPage from './components/MenuPage';
 import CustomCake from './components/CustomCake';
 import GalleryPage from './pages/GalleryPage';
+import SEOHead from './components/SEOHead';
 
 // ScrollToTop on route transition
 function ScrollToTop() {
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-cream-50 text-charcoal-900 selection:bg-brand-100 selection:text-brand-900 font-sans">
       <ScrollToTop />
+      <SEOHead />
 
       {/* Sticky Top Navigation */}
       <Navbar />

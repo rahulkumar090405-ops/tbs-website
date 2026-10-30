@@ -113,8 +113,8 @@ export default function Navbar() {
             : 'bg-cream-50/90 backdrop-blur-md border-brand-100/60 py-2 sm:py-2.5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-3 h-11 sm:h-13">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+          <div className="flex items-center justify-between gap-2 lg:gap-3 xl:gap-5 h-12 sm:h-14">
             
             {/* Header Brand Logo */}
             <Link to="/" className="flex items-center flex-shrink-0" aria-label="The Baking Spot Home">
@@ -125,12 +125,12 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+            {/* Desktop Navigation Links (Clean, 1-line, zero wrapping) */}
+            <nav className="hidden lg:flex items-center gap-2.5 xl:gap-4 2xl:gap-5 flex-shrink-0">
               {/* Home */}
               <Link
                 to="/"
-                className={`text-sm font-medium py-1 transition-colors ${
+                className={`text-xs xl:text-sm font-medium py-1 transition-colors whitespace-nowrap ${
                   location.pathname === '/'
                     ? 'text-brand-900 font-bold border-b-2 border-brand-700'
                     : 'text-charcoal-700 hover:text-brand-700'
@@ -142,7 +142,7 @@ export default function Navbar() {
               {/* Our Story */}
               <a
                 href="/#story"
-                className="text-sm font-medium text-charcoal-700 hover:text-brand-700 transition-colors py-1"
+                className="text-xs xl:text-sm font-medium text-charcoal-700 hover:text-brand-700 transition-colors py-1 whitespace-nowrap"
               >
                 Our Story
               </a>
@@ -156,7 +156,7 @@ export default function Navbar() {
               >
                 <Link
                   to="/menu/all"
-                  className={`inline-flex items-center gap-1.5 text-sm font-medium py-1 transition-colors ${
+                  className={`inline-flex items-center gap-1 text-xs xl:text-sm font-medium py-1 transition-colors whitespace-nowrap ${
                     isMenuPath
                       ? 'text-brand-900 font-bold border-b-2 border-brand-700'
                       : 'text-charcoal-700 hover:text-brand-700'
@@ -219,7 +219,7 @@ export default function Navbar() {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="text-sm font-medium text-charcoal-700 hover:text-brand-700 transition-colors py-1"
+                    className="text-xs xl:text-sm font-medium text-charcoal-700 hover:text-brand-700 transition-colors py-1 whitespace-nowrap"
                   >
                     {link.name}
                   </a>
@@ -227,7 +227,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-sm font-medium py-1 transition-colors ${
+                    className={`text-xs xl:text-sm font-medium py-1 transition-colors whitespace-nowrap ${
                       location.pathname === link.href
                         ? 'text-brand-900 font-bold border-b-2 border-brand-700'
                         : 'text-charcoal-700 hover:text-brand-700'
@@ -239,26 +239,28 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Right Action Buttons */}
-            <div className="hidden sm:flex items-center gap-2.5">
+            {/* Right Action Buttons (Always 1-line, no text breaking) */}
+            <div className="hidden sm:flex items-center gap-1.5 xl:gap-2.5 flex-shrink-0">
               {/* Instagram */}
               <a
                 href="https://www.instagram.com/thebakingspot22/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-medium text-charcoal-700 hover:text-brand-700 px-3 py-1.5 rounded-full border border-brand-200 bg-white transition-all shadow-xs hover:border-brand-400"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-charcoal-700 hover:text-brand-700 px-2.5 py-1.5 rounded-full border border-brand-200 bg-white transition-all shadow-xs hover:border-brand-400 flex-shrink-0 whitespace-nowrap"
+                title="Instagram @thebakingspot22"
               >
-                <InstagramIcon className="w-3.5 h-3.5 text-brand-700" />
-                <span className="hidden xl:inline">@thebakingspot22</span>
+                <InstagramIcon className="w-3.5 h-3.5 text-brand-700 flex-shrink-0" />
+                <span className="hidden xl:inline whitespace-nowrap">@thebakingspot22</span>
               </a>
 
               {/* Phone */}
               <a
                 href={`tel:${RAW_PHONE}`}
-                className="inline-flex items-center gap-1.5 text-xs font-medium text-charcoal-700 hover:text-brand-700 px-3 py-1.5 rounded-full border border-brand-200 bg-white transition-all shadow-xs hover:border-brand-400"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-charcoal-700 hover:text-brand-700 px-2.5 xl:px-3 py-1.5 rounded-full border border-brand-200 bg-white transition-all shadow-xs hover:border-brand-400 flex-shrink-0 whitespace-nowrap"
+                title={`Call ${DISPLAY_PHONE}`}
               >
-                <Phone className="w-3.5 h-3.5 text-brand-700" />
-                <span>{DISPLAY_PHONE}</span>
+                <Phone className="w-3.5 h-3.5 text-brand-700 flex-shrink-0" />
+                <span className="whitespace-nowrap">{DISPLAY_PHONE}</span>
               </a>
 
               {/* Order Now CTA */}
@@ -266,10 +268,10 @@ export default function Navbar() {
                 href={createGeneralWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-bold text-white bg-brand-800 hover:bg-brand-900 px-4 py-2 rounded-full transition-all shadow-xs hover:shadow-md active:scale-95"
+                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-bold text-white bg-brand-800 hover:bg-brand-900 px-3 xl:px-4 py-1.5 xl:py-2 rounded-full transition-all shadow-xs hover:shadow-md active:scale-95 flex-shrink-0 whitespace-nowrap"
               >
-                <WhatsAppIcon className="w-4 h-4" />
-                <span>ORDER NOW</span>
+                <WhatsAppIcon className="w-4 h-4 flex-shrink-0" />
+                <span className="whitespace-nowrap">ORDER NOW</span>
               </a>
             </div>
 

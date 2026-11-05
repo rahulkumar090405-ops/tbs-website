@@ -400,7 +400,7 @@ export const MENU_CATEGORIES = [
     id: "muffins",
     hubId: "desserts",
     name: "Muffins",
-    subtitle: "Freshly baked soft muffins • Min Order 4 Qty in Same Flavour & Min Order ₹150",
+    subtitle: "Freshly baked soft muffins • Min Order 6 Qty in Same Flavour & Min Order ₹200",
     icon: "Cake",
     badge: "10 Flavours",
     hasSizes: false,

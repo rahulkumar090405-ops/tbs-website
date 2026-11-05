@@ -88,7 +88,7 @@ export default function MuffinsSection({ category, searchQuery = '' }) {
           {/* Right: Info Badge */}
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FFF1F2] border border-[#FECDD3] text-[#E11D48] text-xs font-medium self-start sm:self-auto shadow-2xs">
             <Info className="w-3.5 h-3.5 flex-shrink-0" />
-            <span>Min Order 4 Qty in Same Flavour & Min Order ₹150</span>
+            <span>Min Order 6 Qty in Same Flavour & Min Order ₹200</span>
           </div>
         </div>
 
@@ -100,18 +100,9 @@ export default function MuffinsSection({ category, searchQuery = '' }) {
             {/* Table Column Headers */}
             <div className="grid grid-cols-12 gap-3 px-4 py-2.5 rounded-xl bg-[#FAF5FF] text-xs font-bold uppercase tracking-wider text-[#581C87] items-center mb-2">
               <div className="col-span-4 text-left">FLAVOUR</div>
-              <div className="col-span-2 text-center">
-                <span>SMALL</span>
-                <span className="block text-[10px] text-[#7E22CE] font-normal normal-case">(QTY 1–3)</span>
-              </div>
-              <div className="col-span-2 text-center">
-                <span>MEDIUM</span>
-                <span className="block text-[10px] text-[#7E22CE] font-normal normal-case">(QTY 4–9)</span>
-              </div>
-              <div className="col-span-2 text-center">
-                <span>LARGE</span>
-                <span className="block text-[10px] text-[#7E22CE] font-normal normal-case">(QTY 10+)</span>
-              </div>
+              <div className="col-span-2 text-center">SMALL</div>
+              <div className="col-span-2 text-center">MEDIUM</div>
+              <div className="col-span-2 text-center">LARGE</div>
               <div className="col-span-2 text-center">ORDER</div>
             </div>
 
@@ -128,7 +119,7 @@ export default function MuffinsSection({ category, searchQuery = '' }) {
                   ? createWhatsAppOrderLink({
                       cakeName: `${item.name} Muffin`,
                       category: 'Muffins',
-                      size: 'Small (Qty 1–3)',
+                      size: 'Small',
                       totalPrice: item.small,
                     })
                   : null;
@@ -137,7 +128,7 @@ export default function MuffinsSection({ category, searchQuery = '' }) {
                   ? createWhatsAppOrderLink({
                       cakeName: `${item.name} Muffin`,
                       category: 'Muffins',
-                      size: 'Medium (Qty 4–9)',
+                      size: 'Medium',
                       totalPrice: item.medium,
                     })
                   : null;
@@ -146,13 +137,13 @@ export default function MuffinsSection({ category, searchQuery = '' }) {
                   ? createWhatsAppOrderLink({
                       cakeName: `${item.name} Muffin`,
                       category: 'Muffins',
-                      size: 'Large (Qty 10+)',
+                      size: 'Large',
                       totalPrice: item.large,
                     })
                   : null;
 
                 const generalOrderLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                  `Hello The Baking Spot! I would like to order ${item.name} Muffins (Min Order 4 Qty in Same Flavour). Please share availability & size options.`
+                  `Hello The Baking Spot! I would like to order ${item.name} Muffins (Min Order 6 Qty in Same Flavour & Min Order ₹200). Please share availability & size options.`
                 )}`;
 
                 return (
@@ -246,12 +237,17 @@ export default function MuffinsSection({ category, searchQuery = '' }) {
         {/* ========================================================= */}
         {/* 3. BOTTOM INFORMATION STRIP                               */}
         {/* ========================================================= */}
-        <div className="mt-6 p-3 sm:p-3.5 rounded-2xl bg-[#FFF1F0] border border-[#FFE4E1] flex items-center gap-2.5 text-[#E11D48] text-xs sm:text-sm font-semibold">
-          <div className="w-6 h-6 rounded-full bg-[#FFE4E1] text-[#E11D48] flex items-center justify-center flex-shrink-0">
-            <Cake className="w-3.5 h-3.5" />
+        <div className="mt-6 p-3 sm:p-3.5 rounded-2xl bg-[#FFF1F0] border border-[#FFE4E1] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-[#E11D48] text-xs sm:text-sm font-semibold">
+          <div className="flex items-center gap-2.5">
+            <div className="w-6 h-6 rounded-full bg-[#FFE4E1] text-[#E11D48] flex items-center justify-center flex-shrink-0">
+              <Cake className="w-3.5 h-3.5" />
+            </div>
+            <span>
+              All Price Of Muffins Is Per Pics. - With cream frosting add 5 rs extra per pics
+            </span>
           </div>
-          <span>
-            All Price Of Muffins Is Per Pics. - With cream frosting add 5 rs extra per pics
+          <span className="text-xs font-medium text-[#BE123C] bg-[#FFE4E6] px-3 py-1 rounded-full border border-[#FECDD3] self-start sm:self-auto">
+            (Biscoff, Red Velvet &amp; Chocolate frosting 10 rs extra per pics)
           </span>
         </div>
       </div>
